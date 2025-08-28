@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pandas
+spacy
+nltk
+transformers
+torch
+azure-storage-blob
+shareplum
+scikit-learn
+requests

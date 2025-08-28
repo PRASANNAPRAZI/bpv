@@ -1,0 +1,39 @@
+[
+  {
+    "asset_id": "",
+    "entities": [
+      "John"
+    ]
+  },
+  {
+    "asset_id": "",
+    "entities": [
+      "Sarah",
+      "Marketing",
+      "Rating"
+    ]
+  },
+  {
+    "asset_id": "",
+    "entities": [
+      "The",
+      "Tom",
+      "No"
+    ]
+  },
+  {
+    "asset_id": "",
+    "entities": [
+      "Excellent",
+      "Rating"
+    ]
+  },
+  {
+    "asset_id": "",
+    "entities": [
+      "Content",
+      "Jane",
+      "Rating"
+    ]
+  }
+]

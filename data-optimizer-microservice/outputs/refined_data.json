@@ -1,0 +1,32 @@
+[
+  {
+    "asset_id": "asset_2b4370",
+    "refined_score": 0.8,
+    "masked_text": "[MASKED] from HR rated the document 7/10 on 2025-08-22T14:00:00Z",
+    "timestamp": "2025-08-22T14:00:00Z"
+  },
+  {
+    "asset_id": "asset_35a2de",
+    "refined_score": 1.0,
+    "masked_text": "[MASKED] in [MASKED] loved the report. [MASKED]: 9/10",
+    "timestamp": "2025-08-22T15:00:00Z"
+  },
+  {
+    "asset_id": "asset_13bf11",
+    "refined_score": 0.95,
+    "masked_text": "[MASKED] guide by [MASKED] was confusing. [MASKED] rating.",
+    "timestamp": "2025-08-22T16:00:00Z"
+  },
+  {
+    "asset_id": "asset_d423d9",
+    "refined_score": 0.9,
+    "masked_text": "[MASKED] project update. [MASKED]: 8/10",
+    "timestamp": "2025-08-22T17:00:00Z"
+  },
+  {
+    "asset_id": "asset_40205b",
+    "refined_score": 1.1,
+    "masked_text": "[MASKED] by [MASKED] was error-free. [MASKED]: 10/10",
+    "timestamp": "2025-08-22T18:00:00Z"
+  }
+]
