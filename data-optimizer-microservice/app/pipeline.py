@@ -1,4 +1,4 @@
-import pandas as pd, json, os, uuid, re
+import pandas as pd, json, os, uuid, re, spacy
 from datetime import datetime
 from pathlib import Path
 
@@ -14,14 +14,36 @@ def ingest_and_clean(data):
 
 # Step 2: Metadata Extraction (simple regex + masking)
 def extract_metadata(cleaned):
+    nlp = spacy.load("en_core_web_sm")
+
     metadata = []
     for record in cleaned:
         text = record["text"]
-        names = re.findall(r"\b[A-Z][a-z]+\b", text)
-        record["masked_text"] = re.sub(r"\b[A-Z][a-z]+\b", "[MASKED]", text)
-        metadata.append({"asset_id": record.get("asset_id",""), "entities": names})
-    json.dump(metadata, open("outputs/metadata.json","w"), indent=2)
+        doc = nlp(text)
+
+        entities = []
+        masked_text = text
+        for ent in doc.ents:
+            if ent.label_ in ["PERSON", "ORG"]:  # only mask names/orgs
+                entities.append({"text": ent.text, "label": ent.label_})
+                masked_text = masked_text.replace(ent.text, "[MASKED]")
+
+        record["masked_text"] = masked_text
+        metadata.append({
+            "asset_id": record.get("asset_id", ""),
+            "entities": entities
+        })
+
+    with open("outputs/metadata.json", "w") as f:
+        json.dump(metadata, f, indent=2)
+
     return metadata
+    #     text = record["text"]
+    #     names = re.findall(r"\b[A-Z][a-z]+\b", text)
+    #     record["masked_text"] = re.sub(r"\b[A-Z][a-z]+\b", "[MASKED]", text)
+    #     metadata.append({"asset_id": record.get("asset_id",""), "entities": names})
+    # json.dump(metadata, open("outputs/metadata.json","w"), indent=2)
+    # return metadata
 
 # Step 3: ML + Q-learning (lightweight)
 def ml_refinement(cleaned):

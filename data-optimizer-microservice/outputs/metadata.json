@@ -2,38 +2,41 @@
   {
     "asset_id": "",
     "entities": [
-      "John"
+      {
+        "text": "John",
+        "label": "PERSON"
+      }
     ]
   },
   {
     "asset_id": "",
     "entities": [
-      "Sarah",
-      "Marketing",
-      "Rating"
+      {
+        "text": "Sarah",
+        "label": "PERSON"
+      }
     ]
   },
   {
     "asset_id": "",
     "entities": [
-      "The",
-      "Tom",
-      "No"
+      {
+        "text": "Tom",
+        "label": "PERSON"
+      }
     ]
   },
   {
     "asset_id": "",
-    "entities": [
-      "Excellent",
-      "Rating"
-    ]
+    "entities": []
   },
   {
     "asset_id": "",
     "entities": [
-      "Content",
-      "Jane",
-      "Rating"
+      {
+        "text": "Jane",
+        "label": "PERSON"
+      }
     ]
   }
 ]

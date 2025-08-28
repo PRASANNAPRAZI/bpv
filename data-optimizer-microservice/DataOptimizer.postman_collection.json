@@ -1,0 +1,68 @@
+{
+  "info": {
+    "name": "Data Optimizer Microservice",
+    "_postman_id": "1234-5678",
+    "description": "Collection for testing Data Optimizer Microservice",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Trigger Optimization",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/optimize?api_key=trigger-secret",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "optimize"
+          ],
+          "query": [
+            {
+              "key": "api_key",
+              "value": "trigger-secret"
+            }
+          ]
+        },
+        "body": {
+          "mode": "file",
+          "file": {
+            "src": "input_data.json"
+          }
+        }
+      }
+    },
+    {
+      "name": "Retrieve Data",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/retrieve?api_key=trigger-secret",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "retrieve"
+          ],
+          "query": [
+            {
+              "key": "api_key",
+              "value": "trigger-secret"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
