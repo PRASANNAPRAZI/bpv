@@ -1,42 +1,66 @@
 [
   {
-    "asset_id": "",
+    "asset_id": "asset_c6e4e5",
     "entities": [
       {
         "text": "John",
+        "normalized": "John",
         "label": "PERSON"
+      },
+      {
+        "text": "2025-08-22T14:00:00Z",
+        "normalized": "2025-08-22T14:00:00Z",
+        "label": "DATE"
       }
-    ]
+    ],
+    "rating": 7.0,
+    "timestamp": "2025-08-22 14:00:00+00:00",
+    "masked_text": "[MASKED] from HR rated the document 7/10[MASKED]:00Z"
   },
   {
-    "asset_id": "",
+    "asset_id": "asset_426718",
     "entities": [
       {
         "text": "Sarah",
+        "normalized": "Sarah",
         "label": "PERSON"
       }
-    ]
+    ],
+    "rating": 9.0,
+    "timestamp": "2025-08-22 15:00:00+00:00",
+    "masked_text": "[MASKED] in Marketing loved the report. Rating: 9/10"
   },
   {
-    "asset_id": "",
+    "asset_id": "asset_48d853",
     "entities": [
       {
         "text": "Tom",
+        "normalized": "Tom",
         "label": "PERSON"
       }
-    ]
+    ],
+    "rating": "No Rating",
+    "timestamp": "2025-08-22 16:00:00+00:00",
+    "masked_text": "The guide by [MASKED] was confusing. No rating."
   },
   {
-    "asset_id": "",
-    "entities": []
+    "asset_id": "asset_0e0912",
+    "entities": [],
+    "rating": 8.0,
+    "timestamp": "Current Datetime - 2025-09-03 15:13:41.974582",
+    "masked_text": "Excellent project update. Rating: 8/10"
   },
   {
-    "asset_id": "",
+    "asset_id": "asset_9d8983",
     "entities": [
       {
         "text": "Jane",
+        "normalized": "Jane",
         "label": "PERSON"
       }
-    ]
+    ],
+    "rating": 10.0,
+    "timestamp": "2025-08-22 18:00:00+00:00",
+    "masked_text": "Content by [MASKED] was error-free. Rating: 10/10"
   }
 ]

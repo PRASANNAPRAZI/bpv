@@ -1,15 +1,18 @@
 import time
-from fastapi import HTTPException
+from fastapi import HTTPException, Request
+import os
 
-requests_log = {}
-MAX_REQ = 10
-WINDOW = 60
+RATE_LIMIT = int(os.getenv("DATA_OPT_RATE_LIMIT", "10"))   # requests
+RATE_PERIOD = int(os.getenv("DATA_OPT_RATE_PERIOD", "60")) # seconds
 
-def rate_limiter(api_key):
+_client_requests = {}
+
+def rate_limiter(request: Request):
+    client_ip = request.client.host
     now = time.time()
-    logs = requests_log.get(api_key, [])
-    logs = [t for t in logs if now - t < WINDOW]
-    if len(logs) >= MAX_REQ:
+    arr = _client_requests.setdefault(client_ip, [])
+    arr[:] = [ts for ts in arr if now - ts < RATE_PERIOD]
+    if len(arr) >= RATE_LIMIT:
         raise HTTPException(status_code=429, detail="Rate limit exceeded")
-    logs.append(now)
-    requests_log[api_key] = logs
+    arr.append(now)
+    return True

@@ -1,0 +1,74 @@
+{
+  "results": [
+    {
+      "asset_id": "asset_7f9968",
+      "text": "John from HR rated the document 7/10 on 2025-08-22T14:00:00Z",
+      "category": "Neutral feedback",
+      "confidence": 0.39,
+      "predicted_rating": 5,
+      "refined_rating": 4,
+      "action": "decrease",
+      "reward": -3.0
+    },
+    {
+      "asset_id": "asset_f2bbf0",
+      "text": "Sarah in Marketing loved the report. Rating: 9/10",
+      "category": "Excellent work",
+      "confidence": 0.895,
+      "predicted_rating": 9,
+      "refined_rating": 8,
+      "action": "decrease",
+      "reward": -1.0
+    },
+    {
+      "asset_id": "asset_f84115",
+      "text": "The guide by Tom was confusing. No rating.",
+      "category": "Confusing explanation",
+      "confidence": 0.887,
+      "predicted_rating": 4,
+      "refined_rating": 3,
+      "action": "decrease",
+      "reward": 0
+    },
+    {
+      "asset_id": "asset_76a5a2",
+      "text": "Excellent project update. Rating: 8/10",
+      "category": "Excellent work",
+      "confidence": 0.985,
+      "predicted_rating": 9,
+      "refined_rating": 10,
+      "action": "increase",
+      "reward": -2.0
+    },
+    {
+      "asset_id": "asset_8edd31",
+      "text": "Content by Jane was error-free. Rating: 10/10",
+      "category": "Excellent work",
+      "confidence": 0.747,
+      "predicted_rating": 9,
+      "refined_rating": 9,
+      "action": "same",
+      "reward": -1.0
+    }
+  ],
+  "summary": {
+    "average_reward": -1.4,
+    "q_table": {
+      "Neutral feedback": {
+        "decrease": -1.5,
+        "same": 0,
+        "increase": 0
+      },
+      "Excellent work": {
+        "decrease": -0.5,
+        "same": -0.5,
+        "increase": -1.0
+      },
+      "Confusing explanation": {
+        "decrease": 0.0,
+        "same": 0,
+        "increase": 0
+      }
+    }
+  }
+}

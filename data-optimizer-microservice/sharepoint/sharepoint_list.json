@@ -1,0 +1,172 @@
+[
+  {
+    "asset_id": "asset_440f8f",
+    "metadata": {
+      "timestamp": "2025-09-03T15:12:56.142142",
+      "size": 234
+    },
+    "data": {
+      "asset_id": "asset_440f8f",
+      "text": "John from HR rated the document 7/10 on 2025-08-22T14:00:00Z",
+      "category": "Neutral feedback",
+      "confidence": 0.39,
+      "predicted_rating": 5,
+      "refined_rating": 4,
+      "action": "decrease",
+      "reward": -3.0
+    }
+  },
+  {
+    "asset_id": "asset_a3d9b8",
+    "metadata": {
+      "timestamp": "2025-09-03T15:12:56.143010",
+      "size": 222
+    },
+    "data": {
+      "asset_id": "asset_a3d9b8",
+      "text": "Sarah in Marketing loved the report. Rating: 9/10",
+      "category": "Excellent work",
+      "confidence": 0.895,
+      "predicted_rating": 9,
+      "refined_rating": 8,
+      "action": "decrease",
+      "reward": -1.0
+    }
+  },
+  {
+    "asset_id": "asset_234810",
+    "metadata": {
+      "timestamp": "2025-09-03T15:12:56.144693",
+      "size": 219
+    },
+    "data": {
+      "asset_id": "asset_234810",
+      "text": "The guide by Tom was confusing. No rating.",
+      "category": "Confusing explanation",
+      "confidence": 0.887,
+      "predicted_rating": 4,
+      "refined_rating": 5,
+      "action": "increase",
+      "reward": 0
+    }
+  },
+  {
+    "asset_id": "asset_8061b2",
+    "metadata": {
+      "timestamp": "2025-09-03T15:12:56.146325",
+      "size": 207
+    },
+    "data": {
+      "asset_id": "asset_8061b2",
+      "text": "Excellent project update. Rating: 8/10",
+      "category": "Excellent work",
+      "confidence": 0.985,
+      "predicted_rating": 9,
+      "refined_rating": 9,
+      "action": "same",
+      "reward": -1.0
+    }
+  },
+  {
+    "asset_id": "asset_267a11",
+    "metadata": {
+      "timestamp": "2025-09-03T15:12:56.148405",
+      "size": 219
+    },
+    "data": {
+      "asset_id": "asset_267a11",
+      "text": "Content by Jane was error-free. Rating: 10/10",
+      "category": "Excellent work",
+      "confidence": 0.747,
+      "predicted_rating": 9,
+      "refined_rating": 10,
+      "action": "increase",
+      "reward": -0.0
+    }
+  },
+  {
+    "asset_id": "asset_7f9968",
+    "metadata": {
+      "timestamp": "2025-09-03T15:13:52.921390",
+      "size": 234
+    },
+    "data": {
+      "asset_id": "asset_7f9968",
+      "text": "John from HR rated the document 7/10 on 2025-08-22T14:00:00Z",
+      "category": "Neutral feedback",
+      "confidence": 0.39,
+      "predicted_rating": 5,
+      "refined_rating": 4,
+      "action": "decrease",
+      "reward": -3.0
+    }
+  },
+  {
+    "asset_id": "asset_f2bbf0",
+    "metadata": {
+      "timestamp": "2025-09-03T15:13:52.922253",
+      "size": 222
+    },
+    "data": {
+      "asset_id": "asset_f2bbf0",
+      "text": "Sarah in Marketing loved the report. Rating: 9/10",
+      "category": "Excellent work",
+      "confidence": 0.895,
+      "predicted_rating": 9,
+      "refined_rating": 8,
+      "action": "decrease",
+      "reward": -1.0
+    }
+  },
+  {
+    "asset_id": "asset_f84115",
+    "metadata": {
+      "timestamp": "2025-09-03T15:13:52.943484",
+      "size": 219
+    },
+    "data": {
+      "asset_id": "asset_f84115",
+      "text": "The guide by Tom was confusing. No rating.",
+      "category": "Confusing explanation",
+      "confidence": 0.887,
+      "predicted_rating": 4,
+      "refined_rating": 3,
+      "action": "decrease",
+      "reward": 0
+    }
+  },
+  {
+    "asset_id": "asset_76a5a2",
+    "metadata": {
+      "timestamp": "2025-09-03T15:13:52.999692",
+      "size": 212
+    },
+    "data": {
+      "asset_id": "asset_76a5a2",
+      "text": "Excellent project update. Rating: 8/10",
+      "category": "Excellent work",
+      "confidence": 0.985,
+      "predicted_rating": 9,
+      "refined_rating": 10,
+      "action": "increase",
+      "reward": -2.0
+    }
+  },
+  {
+    "asset_id": "asset_8edd31",
+    "metadata": {
+      "timestamp": "2025-09-03T15:13:53.066095",
+      "size": 214
+    },
+    "data": {
+      "asset_id": "asset_8edd31",
+      "text": "Content by Jane was error-free. Rating: 10/10",
+      "category": "Excellent work",
+      "confidence": 0.747,
+      "predicted_rating": 9,
+      "refined_rating": 9,
+      "action": "same",
+      "reward": -1.0
+    }
+  }
+]

@@ -9,3 +9,4 @@ azure-storage-blob
 shareplum
 scikit-learn
 requests
+python-jose

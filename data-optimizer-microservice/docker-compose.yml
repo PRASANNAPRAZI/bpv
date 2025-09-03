@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  data-optimizer:
+    build: ./
+    container_name: data-optimizer
+    env_file:
+      - .env
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - ./outputs:/app/outputs
+      - ./azure_blob:/app/azure_blob
+      - ./sharepoint:/app/sharepoint

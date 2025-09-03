@@ -1,0 +1,8 @@
+{
+  "ingested_records": 5,
+  "cleaned_records": 5,
+  "missing_ratings_filled": 1,
+  "missing_timestamps_filled": 1,
+  "duplicates_removed": 0,
+  "run_at": "2025-09-03T15:13:41.978813"
+}

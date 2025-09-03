@@ -10,16 +10,8 @@ reinforcement learning (Q-learning), and external storage simulation (Azure Blob
 ## 🛠️ Setup Instructions
 
 ```bash
-# Create virtual environment
-python -m venv .venv
-source .venv/bin/activate   # Linux/Mac
-.venv\Scripts\activate    # Windows
-
-# Install dependencies
-pip3 install -r requirements.txt
-python3 -m spacy download en_core_web_sm
-# Run the app
-uvicorn app.main:app --reload --port 8000
+docker-compose up --build
+docker-compose down
 ```
 
 Dependencies:
