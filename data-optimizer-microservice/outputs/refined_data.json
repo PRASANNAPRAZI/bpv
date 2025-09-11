@@ -1,6 +1,6 @@
 [
   {
-    "asset_id": "asset_7f9968",
+    "asset_id": "asset_778fb3",
     "text": "John from HR rated the document 7/10 on 2025-08-22T14:00:00Z",
     "category": "Neutral feedback",
     "confidence": 0.39,
@@ -10,7 +10,27 @@
     "reward": -3.0
   },
   {
-    "asset_id": "asset_f2bbf0",
+    "asset_id": "asset_defb7d",
+    "text": "James from Accounting team shared last q1 reportfor b2b. Rating: 9/10",
+    "category": "Excellent work",
+    "confidence": 0.706,
+    "predicted_rating": 9,
+    "refined_rating": 8,
+    "action": "decrease",
+    "reward": -1.0
+  },
+  {
+    "asset_id": "asset_982196",
+    "text": "New feedback from Mark in Marketing. Rating: 7/10",
+    "category": "Excellent work",
+    "confidence": 0.507,
+    "predicted_rating": 9,
+    "refined_rating": 9,
+    "action": "same",
+    "reward": -2.0
+  },
+  {
+    "asset_id": "asset_a244bf",
     "text": "Sarah in Marketing loved the report. Rating: 9/10",
     "category": "Excellent work",
     "confidence": 0.895,
@@ -20,17 +40,7 @@
     "reward": -1.0
   },
   {
-    "asset_id": "asset_f84115",
-    "text": "The guide by Tom was confusing. No rating.",
-    "category": "Confusing explanation",
-    "confidence": 0.887,
-    "predicted_rating": 4,
-    "refined_rating": 3,
-    "action": "decrease",
-    "reward": 0
-  },
-  {
-    "asset_id": "asset_76a5a2",
+    "asset_id": "asset_c6d138",
     "text": "Excellent project update. Rating: 8/10",
     "category": "Excellent work",
     "confidence": 0.985,
@@ -40,10 +50,20 @@
     "reward": -2.0
   },
   {
-    "asset_id": "asset_8edd31",
-    "text": "Content by Jane was error-free. Rating: 10/10",
+    "asset_id": "asset_d8fa78",
+    "text": "Content by Jane was error-free. Rating: 10/10. my email is prasanna.v@aitrg.com",
     "category": "Excellent work",
-    "confidence": 0.747,
+    "confidence": 0.798,
+    "predicted_rating": 9,
+    "refined_rating": 8,
+    "action": "decrease",
+    "reward": -2.0
+  },
+  {
+    "asset_id": "asset_064e3a",
+    "text": "New feedback from Alex in Sales. Rating: 8/10",
+    "category": "Excellent work",
+    "confidence": 0.749,
     "predicted_rating": 9,
     "refined_rating": 9,
     "action": "same",

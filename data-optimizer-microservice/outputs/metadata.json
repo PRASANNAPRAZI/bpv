@@ -1,66 +1,198 @@
 [
   {
-    "asset_id": "asset_c6e4e5",
+    "asset_id": "asset_de7786",
     "entities": [
       {
+        "entity_type": "PERSON",
         "text": "John",
-        "normalized": "John",
-        "label": "PERSON"
+        "start": 0,
+        "end": 4,
+        "score": "0.9990952"
       },
       {
+        "entity_type": "ORGANIZATION",
+        "text": "HR",
+        "start": 10,
+        "end": 12,
+        "score": "0.97620356"
+      },
+      {
+        "entity_type": "DATE_TIME",
         "text": "2025-08-22T14:00:00Z",
-        "normalized": "2025-08-22T14:00:00Z",
-        "label": "DATE"
+        "start": 40,
+        "end": 60,
+        "score": 0.8
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "text": "7/10",
+        "start": 32,
+        "end": 36,
+        "score": 0.1
       }
     ],
     "rating": 7.0,
     "timestamp": "2025-08-22 14:00:00+00:00",
-    "masked_text": "[MASKED] from HR rated the document 7/10[MASKED]:00Z"
+    "masked_text": "<PERSON> from <ORGANIZATION> rated the document <DATE_TIME> on <DATE_TIME>"
   },
   {
-    "asset_id": "asset_426718",
+    "asset_id": "asset_c8cc13",
     "entities": [
       {
+        "entity_type": "PERSON",
+        "text": "James",
+        "start": 0,
+        "end": 5,
+        "score": "0.9997199"
+      },
+      {
+        "entity_type": "ORGANIZATION",
+        "text": "Accounting team",
+        "start": 11,
+        "end": 26,
+        "score": "0.96612334"
+      },
+      {
+        "entity_type": "US_DRIVER_LICENSE",
+        "text": "q1",
+        "start": 39,
+        "end": 41,
+        "score": 0.3
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "text": "9/10",
+        "start": 65,
+        "end": 69,
+        "score": 0.1
+      }
+    ],
+    "rating": 9.0,
+    "timestamp": "2025-09-08 18:00:00+00:00",
+    "masked_text": "<PERSON> from <ORGANIZATION> shared last <US_DRIVER_LICENSE> reportfor b2b. Rating: <DATE_TIME>"
+  },
+  {
+    "asset_id": "asset_d15311",
+    "entities": [
+      {
+        "entity_type": "PERSON",
+        "text": "Mark",
+        "start": 18,
+        "end": 22,
+        "score": "0.9554715"
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "text": "7/10",
+        "start": 45,
+        "end": 49,
+        "score": 0.1
+      }
+    ],
+    "rating": 7.0,
+    "timestamp": "2025-09-09 12:00:00+00:00",
+    "masked_text": "New feedback from <PERSON> in Marketing. Rating: <DATE_TIME>"
+  },
+  {
+    "asset_id": "asset_3dcbb8",
+    "entities": [
+      {
+        "entity_type": "PERSON",
         "text": "Sarah",
-        "normalized": "Sarah",
-        "label": "PERSON"
+        "start": 0,
+        "end": 5,
+        "score": "0.99882287"
+      },
+      {
+        "entity_type": "ORGANIZATION",
+        "text": "Marketing",
+        "start": 9,
+        "end": 18,
+        "score": "0.9223874"
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "text": "9/10",
+        "start": 45,
+        "end": 49,
+        "score": 0.1
       }
     ],
     "rating": 9.0,
     "timestamp": "2025-08-22 15:00:00+00:00",
-    "masked_text": "[MASKED] in Marketing loved the report. Rating: 9/10"
+    "masked_text": "<PERSON> in <ORGANIZATION> loved the report. Rating: <DATE_TIME>"
   },
   {
-    "asset_id": "asset_48d853",
+    "asset_id": "asset_6d212f",
     "entities": [
       {
-        "text": "Tom",
-        "normalized": "Tom",
-        "label": "PERSON"
+        "entity_type": "DATE_TIME",
+        "text": "8/10",
+        "start": 34,
+        "end": 38,
+        "score": 0.44999999999999996
       }
     ],
-    "rating": "No Rating",
-    "timestamp": "2025-08-22 16:00:00+00:00",
-    "masked_text": "The guide by [MASKED] was confusing. No rating."
-  },
-  {
-    "asset_id": "asset_0e0912",
-    "entities": [],
     "rating": 8.0,
-    "timestamp": "Current Datetime - 2025-09-03 15:13:41.974582",
-    "masked_text": "Excellent project update. Rating: 8/10"
+    "timestamp": "Current Datetime - 2025-09-11 11:19:41.126912",
+    "masked_text": "Excellent project update. Rating: <DATE_TIME>"
   },
   {
-    "asset_id": "asset_9d8983",
+    "asset_id": "asset_d410df",
     "entities": [
       {
+        "entity_type": "EMAIL_ADDRESS",
+        "text": "prasanna.v@aitrg.com",
+        "start": 59,
+        "end": 79,
+        "score": 1.0
+      },
+      {
+        "entity_type": "PERSON",
         "text": "Jane",
-        "normalized": "Jane",
-        "label": "PERSON"
+        "start": 11,
+        "end": 15,
+        "score": "0.9935055"
+      },
+      {
+        "entity_type": "URL",
+        "text": "aitrg.com",
+        "start": 70,
+        "end": 79,
+        "score": 0.5
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "text": "10/10",
+        "start": 40,
+        "end": 45,
+        "score": 0.1
       }
     ],
     "rating": 10.0,
     "timestamp": "2025-08-22 18:00:00+00:00",
-    "masked_text": "Content by [MASKED] was error-free. Rating: 10/10"
+    "masked_text": "Content by <PERSON> was error-free. Rating: <DATE_TIME>. my email is <EMAIL_ADDRESS>"
+  },
+  {
+    "asset_id": "asset_1012ee",
+    "entities": [
+      {
+        "entity_type": "PERSON",
+        "text": "Alex",
+        "start": 18,
+        "end": 22,
+        "score": "0.9801665"
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "text": "8/10",
+        "start": 41,
+        "end": 45,
+        "score": 0.1
+      }
+    ],
+    "rating": 8.0,
+    "timestamp": "2025-09-09 12:00:00+00:00",
+    "masked_text": "New feedback from <PERSON> in Sales. Rating: <DATE_TIME>"
   }
 ]

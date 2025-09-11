@@ -60,6 +60,7 @@ def read_blob_file(asset_id: str):
     with gzip.open(file_path, "rt", encoding="utf-8") as f:
         return json.load(f)
 
+
 @app.get("/read_blob/{asset_id}")
 async def read_blob(asset_id: str, _auth: bool = Depends(verify_token)):
     if api_key != "trigger-secret":

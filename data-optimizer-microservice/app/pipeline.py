@@ -3,6 +3,31 @@ from datetime import datetime
 from pathlib import Path
 from transformers import pipeline
 from app.storage import persist_final_results
+from presidio_analyzer import AnalyzerEngine
+from presidio_anonymizer import AnonymizerEngine
+import spacy
+from presidio_analyzer.nlp_engine import NlpEngineProvider
+
+nlp_configuration = {
+    "nlp_engine_name": "transformers",
+    "models": [
+        {
+            "lang_code": "en",
+            "model_name": {
+                "spacy": "en_core_web_lg",
+                "transformers": "dslim/bert-base-NER"
+            }
+        }
+    ]
+}
+
+# Build NLP engine properly
+provider = NlpEngineProvider(nlp_configuration=nlp_configuration)
+nlp_engine = provider.create_engine()
+
+# Pass it into AnalyzerEngine
+analyzer = AnalyzerEngine(nlp_engine=nlp_engine)
+anonymizer = AnonymizerEngine()
 
 output_dir = Path("outputs")
 output_dir.mkdir(exist_ok=True)
@@ -11,7 +36,48 @@ output_dir.mkdir(exist_ok=True)
 def ingest_and_clean(data):
     try:
         df = pd.DataFrame(data)
+        print(df)
 
+        # index
+        df = df.drop(index=3).reset_index(drop=True)
+
+        # condition
+        # df = df[~df["text"].str.contains("Tom", case=False)].reset_index(drop=True)
+        # df = df[df["rating"].notna()].reset_index(drop=True)
+        # df = df[
+        #         ~(
+        #             (df["rating"].isna()) |
+        #             (df["text"].str.contains("HR"))
+        #         )
+        #     ].reset_index(drop=True)
+
+        print("length df:", len(df))
+        # adding row
+        new_row = {
+            "text": "New feedback from Alex in Sales. Rating: 8/10",
+            "rating": 8,
+            "timestamp": "2025-09-09T12:00:00Z"
+        }
+        df.loc[len(df)] = new_row
+
+        new_row_2 = {
+            "text": "New feedback from Mark in Marketing. Rating: 7/10",
+            "rating": 7,
+            "timestamp": "2025-09-09T12:00:00Z"
+        }
+        df = pd.concat([
+            df.iloc[:2],
+            pd.DataFrame([new_row_2]),
+            # ignore_index=True
+            df.iloc[2:]
+        ]).reset_index(drop=True)
+
+        # replace
+
+        df["text"] = df["text"].str.replace("Tom", "Tommy", regex=False)
+        df.at[3, "text"] = df.at[3, "text"].replace("confusing", "confusing the idea")
+
+        print(df)
         if "text" in df.columns:
             df["text"] = (
                 df["text"]
@@ -66,50 +132,41 @@ def ingest_and_clean(data):
         return []
 
 # Step 2: Metadata Extraction
-from spacy.pipeline import EntityRuler
-
-def add_custom_entities(nlp):
-    ruler = nlp.add_pipe("entity_ruler", before="ner")
-    patterns = [
-        {"label": "ORG", "pattern": "HR"},
-        {"label": "ORG", "pattern": "Marketing"}
-    ]
-    ruler.add_patterns(patterns)
-    return nlp
-
-nlp = spacy.load("en_core_web_sm")
-# nlp = add_custom_entities(nlp)
-
 def extract_metadata(cleaned):
 
     metadata = []
 
     for record in cleaned:
         text = record["text"]
-        doc = nlp(text)
+        results = analyzer.analyze(
+                                    text=text,
+                                    language="en"
+                                )
+        entities = [
+            {
+                "entity_type": r.entity_type,
+                "text": text[r.start:r.end],
+                "start": r.start,
+                "end": r.end,
+                "score": r.score,
+            }
+            for r in results
+        ]
 
-        entities = []
-        masked_text = list(text)
+        # Anonymize text
+        anonymized = anonymizer.anonymize(text=text, analyzer_results=results)
+        masked_text = anonymized.text
 
-        for ent in doc.ents:
-            if ent.label_ in ["PERSON", "ORG", "DATE"]:
-                entity_map = {"HR": "Human Resources", "Marketing": "Marketing Department"}
-                normalized = entity_map.get(ent.text, ent.text)
-                entities.append({
-                    "text": ent.text,
-                    "normalized": normalized,
-                    "label": ent.label_,
-                })
-                masked_text[ent.start_char:ent.end_char] = "[MASKED]"
-
-        masked_text = "".join(masked_text)
+        # Generate unique asset_id
         asset_id = f"asset_{uuid.uuid4().hex[:6]}"
+
+        # Build enriched record
         enriched = {
             "asset_id": asset_id,
             "entities": entities,
             "rating": record.get("rating"),
             "timestamp": record.get("timestamp"),
-            "masked_text": masked_text
+            "masked_text": masked_text,
         }
         metadata.append(enriched)
 
@@ -138,15 +195,11 @@ CATEGORY_TO_RATING = {
     "Negative feedback": 3,
 }
 
-# Reinforcement Learning Setup
-
 ACTIONS = ["decrease", "same", "increase"]
 Q_TABLE = {}
 ALPHA, GAMMA, EPSILON = 0.5, 0.9, 0.2
 
-
 def q_update(state, action, reward, next_state):
-
     if state not in Q_TABLE:
         Q_TABLE[state] = {a: 0 for a in ACTIONS}
     old_value = Q_TABLE[state][action]
@@ -155,7 +208,6 @@ def q_update(state, action, reward, next_state):
 
 
 def choose_action(state):
-
     if state not in Q_TABLE:
         Q_TABLE[state] = {a: 0 for a in ACTIONS}
     if random.random() < EPSILON:  # explore
@@ -171,6 +223,7 @@ def process_logic(cleaned_records: list):
 
         text = record["text"]
         actual_rating = record.get("rating")
+        timestamp = record.get("timestamp") or "unknown"
 
         # Zero-Shot classification
         prediction = zero_shot(text, candidate_labels=CATEGORIES)
@@ -195,7 +248,6 @@ def process_logic(cleaned_records: list):
 
         total_reward += reward
         q_update(category, action, reward, category)
-
         print(f"[Record {i}] {text}")
         print(f"Category: {category} (conf={confidence:.3f})")
         print(f"Predicted={predicted_rating}, Refined={refined_rating}, Action={action}")
@@ -241,5 +293,4 @@ def run_workflow(data):
     refined = process_logic(cleaned)
     persist_final_results(refined, backend="azure")
     persist_final_results(refined, backend="sharepoint")
-
-    return refined
+    return cleaned

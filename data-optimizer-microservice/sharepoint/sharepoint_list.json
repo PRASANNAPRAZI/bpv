@@ -1,12 +1,12 @@
 [
   {
-    "asset_id": "asset_440f8f",
+    "asset_id": "asset_09561e",
     "metadata": {
-      "timestamp": "2025-09-03T15:12:56.142142",
+      "timestamp": "2025-09-11T07:53:25.907205",
       "size": 234
     },
     "data": {
-      "asset_id": "asset_440f8f",
+      "asset_id": "asset_09561e",
       "text": "John from HR rated the document 7/10 on 2025-08-22T14:00:00Z",
       "category": "Neutral feedback",
       "confidence": 0.39,
@@ -17,16 +17,16 @@
     }
   },
   {
-    "asset_id": "asset_a3d9b8",
+    "asset_id": "asset_241686",
     "metadata": {
-      "timestamp": "2025-09-03T15:12:56.143010",
-      "size": 222
+      "timestamp": "2025-09-11T07:53:26.251245",
+      "size": 235
     },
     "data": {
-      "asset_id": "asset_a3d9b8",
-      "text": "Sarah in Marketing loved the report. Rating: 9/10",
+      "asset_id": "asset_241686",
+      "text": "James from Accounting team shared last q1 report. Rating: 9/10",
       "category": "Excellent work",
-      "confidence": 0.895,
+      "confidence": 0.694,
       "predicted_rating": 9,
       "refined_rating": 8,
       "action": "decrease",
@@ -34,115 +34,47 @@
     }
   },
   {
-    "asset_id": "asset_234810",
+    "asset_id": "asset_5d11e4",
     "metadata": {
-      "timestamp": "2025-09-03T15:12:56.144693",
-      "size": 219
+      "timestamp": "2025-09-11T07:53:26.470676",
+      "size": 218
     },
     "data": {
-      "asset_id": "asset_234810",
-      "text": "The guide by Tom was confusing. No rating.",
-      "category": "Confusing explanation",
-      "confidence": 0.887,
-      "predicted_rating": 4,
-      "refined_rating": 5,
-      "action": "increase",
-      "reward": 0
-    }
-  },
-  {
-    "asset_id": "asset_8061b2",
-    "metadata": {
-      "timestamp": "2025-09-03T15:12:56.146325",
-      "size": 207
-    },
-    "data": {
-      "asset_id": "asset_8061b2",
-      "text": "Excellent project update. Rating: 8/10",
+      "asset_id": "asset_5d11e4",
+      "text": "New feedback from Mark in Marketing. Rating: 7/10",
       "category": "Excellent work",
-      "confidence": 0.985,
+      "confidence": 0.507,
       "predicted_rating": 9,
       "refined_rating": 9,
       "action": "same",
-      "reward": -1.0
+      "reward": -2.0
     }
   },
   {
-    "asset_id": "asset_267a11",
+    "asset_id": "asset_1a4983",
     "metadata": {
-      "timestamp": "2025-09-03T15:12:56.148405",
-      "size": 219
+      "timestamp": "2025-09-11T07:53:26.813632",
+      "size": 218
     },
     "data": {
-      "asset_id": "asset_267a11",
-      "text": "Content by Jane was error-free. Rating: 10/10",
+      "asset_id": "asset_1a4983",
+      "text": "Sarah in Marketing loved the report. Rating: 9/10",
       "category": "Excellent work",
-      "confidence": 0.747,
+      "confidence": 0.895,
       "predicted_rating": 9,
-      "refined_rating": 10,
-      "action": "increase",
+      "refined_rating": 9,
+      "action": "same",
       "reward": -0.0
     }
   },
   {
-    "asset_id": "asset_7f9968",
+    "asset_id": "asset_3e1f9f",
     "metadata": {
-      "timestamp": "2025-09-03T15:13:52.921390",
-      "size": 234
-    },
-    "data": {
-      "asset_id": "asset_7f9968",
-      "text": "John from HR rated the document 7/10 on 2025-08-22T14:00:00Z",
-      "category": "Neutral feedback",
-      "confidence": 0.39,
-      "predicted_rating": 5,
-      "refined_rating": 4,
-      "action": "decrease",
-      "reward": -3.0
-    }
-  },
-  {
-    "asset_id": "asset_f2bbf0",
-    "metadata": {
-      "timestamp": "2025-09-03T15:13:52.922253",
-      "size": 222
-    },
-    "data": {
-      "asset_id": "asset_f2bbf0",
-      "text": "Sarah in Marketing loved the report. Rating: 9/10",
-      "category": "Excellent work",
-      "confidence": 0.895,
-      "predicted_rating": 9,
-      "refined_rating": 8,
-      "action": "decrease",
-      "reward": -1.0
-    }
-  },
-  {
-    "asset_id": "asset_f84115",
-    "metadata": {
-      "timestamp": "2025-09-03T15:13:52.943484",
-      "size": 219
-    },
-    "data": {
-      "asset_id": "asset_f84115",
-      "text": "The guide by Tom was confusing. No rating.",
-      "category": "Confusing explanation",
-      "confidence": 0.887,
-      "predicted_rating": 4,
-      "refined_rating": 3,
-      "action": "decrease",
-      "reward": 0
-    }
-  },
-  {
-    "asset_id": "asset_76a5a2",
-    "metadata": {
-      "timestamp": "2025-09-03T15:13:52.999692",
+      "timestamp": "2025-09-11T07:53:26.852729",
       "size": 212
     },
     "data": {
-      "asset_id": "asset_76a5a2",
+      "asset_id": "asset_3e1f9f",
       "text": "Excellent project update. Rating: 8/10",
       "category": "Excellent work",
       "confidence": 0.985,
@@ -153,16 +85,271 @@
     }
   },
   {
-    "asset_id": "asset_8edd31",
+    "asset_id": "asset_ba4f83",
     "metadata": {
-      "timestamp": "2025-09-03T15:13:53.066095",
-      "size": 214
+      "timestamp": "2025-09-11T07:53:26.975816",
+      "size": 218
     },
     "data": {
-      "asset_id": "asset_8edd31",
+      "asset_id": "asset_ba4f83",
       "text": "Content by Jane was error-free. Rating: 10/10",
       "category": "Excellent work",
       "confidence": 0.747,
+      "predicted_rating": 9,
+      "refined_rating": 8,
+      "action": "decrease",
+      "reward": -2.0
+    }
+  },
+  {
+    "asset_id": "asset_15f8ea",
+    "metadata": {
+      "timestamp": "2025-09-11T07:53:27.012665",
+      "size": 214
+    },
+    "data": {
+      "asset_id": "asset_15f8ea",
+      "text": "New feedback from Alex in Sales. Rating: 8/10",
+      "category": "Excellent work",
+      "confidence": 0.749,
+      "predicted_rating": 9,
+      "refined_rating": 9,
+      "action": "same",
+      "reward": -1.0
+    }
+  },
+  {
+    "asset_id": "asset_c11667",
+    "metadata": {
+      "timestamp": "2025-09-11T07:53:43.006138",
+      "size": 230
+    },
+    "data": {
+      "asset_id": "asset_c11667",
+      "text": "John from HR rated the document 7/10 on 2025-08-22T14:00:00Z",
+      "category": "Neutral feedback",
+      "confidence": 0.39,
+      "predicted_rating": 5,
+      "refined_rating": 5,
+      "action": "same",
+      "reward": -2.0
+    }
+  },
+  {
+    "asset_id": "asset_f4bfca",
+    "metadata": {
+      "timestamp": "2025-09-11T07:53:43.014365",
+      "size": 231
+    },
+    "data": {
+      "asset_id": "asset_f4bfca",
+      "text": "James from Accounting team shared last q1 report. Rating: 9/10",
+      "category": "Excellent work",
+      "confidence": 0.694,
+      "predicted_rating": 9,
+      "refined_rating": 9,
+      "action": "same",
+      "reward": -0.0
+    }
+  },
+  {
+    "asset_id": "asset_c5c5a1",
+    "metadata": {
+      "timestamp": "2025-09-11T07:53:43.025348",
+      "size": 218
+    },
+    "data": {
+      "asset_id": "asset_c5c5a1",
+      "text": "New feedback from Mark in Marketing. Rating: 7/10",
+      "category": "Excellent work",
+      "confidence": 0.507,
+      "predicted_rating": 9,
+      "refined_rating": 9,
+      "action": "same",
+      "reward": -2.0
+    }
+  },
+  {
+    "asset_id": "asset_dc832f",
+    "metadata": {
+      "timestamp": "2025-09-11T07:53:43.029544",
+      "size": 223
+    },
+    "data": {
+      "asset_id": "asset_dc832f",
+      "text": "Sarah in Marketing loved the report. Rating: 9/10",
+      "category": "Excellent work",
+      "confidence": 0.895,
+      "predicted_rating": 9,
+      "refined_rating": 10,
+      "action": "increase",
+      "reward": -1.0
+    }
+  },
+  {
+    "asset_id": "asset_0b0c2d",
+    "metadata": {
+      "timestamp": "2025-09-11T07:53:43.033770",
+      "size": 212
+    },
+    "data": {
+      "asset_id": "asset_0b0c2d",
+      "text": "Excellent project update. Rating: 8/10",
+      "category": "Excellent work",
+      "confidence": 0.985,
+      "predicted_rating": 9,
+      "refined_rating": 10,
+      "action": "increase",
+      "reward": -2.0
+    }
+  },
+  {
+    "asset_id": "asset_272672",
+    "metadata": {
+      "timestamp": "2025-09-11T07:53:43.040718",
+      "size": 218
+    },
+    "data": {
+      "asset_id": "asset_272672",
+      "text": "Content by Jane was error-free. Rating: 10/10",
+      "category": "Excellent work",
+      "confidence": 0.747,
+      "predicted_rating": 9,
+      "refined_rating": 8,
+      "action": "decrease",
+      "reward": -2.0
+    }
+  },
+  {
+    "asset_id": "asset_5a9dea",
+    "metadata": {
+      "timestamp": "2025-09-11T07:53:43.045375",
+      "size": 214
+    },
+    "data": {
+      "asset_id": "asset_5a9dea",
+      "text": "New feedback from Alex in Sales. Rating: 8/10",
+      "category": "Excellent work",
+      "confidence": 0.749,
+      "predicted_rating": 9,
+      "refined_rating": 9,
+      "action": "same",
+      "reward": -1.0
+    }
+  },
+  {
+    "asset_id": "asset_778fb3",
+    "metadata": {
+      "timestamp": "2025-09-11T11:28:27.823157",
+      "size": 234
+    },
+    "data": {
+      "asset_id": "asset_778fb3",
+      "text": "John from HR rated the document 7/10 on 2025-08-22T14:00:00Z",
+      "category": "Neutral feedback",
+      "confidence": 0.39,
+      "predicted_rating": 5,
+      "refined_rating": 4,
+      "action": "decrease",
+      "reward": -3.0
+    }
+  },
+  {
+    "asset_id": "asset_defb7d",
+    "metadata": {
+      "timestamp": "2025-09-11T11:28:27.825050",
+      "size": 242
+    },
+    "data": {
+      "asset_id": "asset_defb7d",
+      "text": "James from Accounting team shared last q1 reportfor b2b. Rating: 9/10",
+      "category": "Excellent work",
+      "confidence": 0.706,
+      "predicted_rating": 9,
+      "refined_rating": 8,
+      "action": "decrease",
+      "reward": -1.0
+    }
+  },
+  {
+    "asset_id": "asset_982196",
+    "metadata": {
+      "timestamp": "2025-09-11T11:28:28.252645",
+      "size": 218
+    },
+    "data": {
+      "asset_id": "asset_982196",
+      "text": "New feedback from Mark in Marketing. Rating: 7/10",
+      "category": "Excellent work",
+      "confidence": 0.507,
+      "predicted_rating": 9,
+      "refined_rating": 9,
+      "action": "same",
+      "reward": -2.0
+    }
+  },
+  {
+    "asset_id": "asset_a244bf",
+    "metadata": {
+      "timestamp": "2025-09-11T11:28:28.757662",
+      "size": 222
+    },
+    "data": {
+      "asset_id": "asset_a244bf",
+      "text": "Sarah in Marketing loved the report. Rating: 9/10",
+      "category": "Excellent work",
+      "confidence": 0.895,
+      "predicted_rating": 9,
+      "refined_rating": 8,
+      "action": "decrease",
+      "reward": -1.0
+    }
+  },
+  {
+    "asset_id": "asset_c6d138",
+    "metadata": {
+      "timestamp": "2025-09-11T11:28:28.759798",
+      "size": 212
+    },
+    "data": {
+      "asset_id": "asset_c6d138",
+      "text": "Excellent project update. Rating: 8/10",
+      "category": "Excellent work",
+      "confidence": 0.985,
+      "predicted_rating": 9,
+      "refined_rating": 10,
+      "action": "increase",
+      "reward": -2.0
+    }
+  },
+  {
+    "asset_id": "asset_d8fa78",
+    "metadata": {
+      "timestamp": "2025-09-11T11:28:29.537145",
+      "size": 252
+    },
+    "data": {
+      "asset_id": "asset_d8fa78",
+      "text": "Content by Jane was error-free. Rating: 10/10. my email is prasanna.v@aitrg.com",
+      "category": "Excellent work",
+      "confidence": 0.798,
+      "predicted_rating": 9,
+      "refined_rating": 8,
+      "action": "decrease",
+      "reward": -2.0
+    }
+  },
+  {
+    "asset_id": "asset_064e3a",
+    "metadata": {
+      "timestamp": "2025-09-11T11:28:29.557305",
+      "size": 214
+    },
+    "data": {
+      "asset_id": "asset_064e3a",
+      "text": "New feedback from Alex in Sales. Rating: 8/10",
+      "category": "Excellent work",
+      "confidence": 0.749,
       "predicted_rating": 9,
       "refined_rating": 9,
       "action": "same",

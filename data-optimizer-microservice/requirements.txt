@@ -1,7 +1,9 @@
-fastapi
-uvicorn
-pandas
+fastapi==0.114.0
+uvicorn==0.23.1
+presidio-analyzer[transformers]
+presidio-anonymizer
 spacy
+pandas
 nltk
 transformers
 torch
